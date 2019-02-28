@@ -1,0 +1,77 @@
+create table ResponsablesFlujos
+(
+	FiNumEmpleado int not null,
+	FcNombre varchar(150),
+	FcCorreo varchar(50),
+	FiCelular bigint
+)
+go
+
+
+INSERT INTO belajar.dbo.ResponsablesFlujos (FiNumEmpleado, FcNombre, FcCorreo, FiCelular) VALUES (999999, 'Roberto Ivan Meza Trillo', 'rimeza@bancoazteca.com.mx', null);
+INSERT INTO belajar.dbo.ResponsablesFlujos (FiNumEmpleado, FcNombre, FcCorreo, FiCelular) VALUES (991887, 'Gilberto Antonio Alatorre Cortez', 'galatorre@elektra.com.mx', null);
+INSERT INTO belajar.dbo.ResponsablesFlujos (FiNumEmpleado, FcNombre, FcCorreo, FiCelular) VALUES (991495, 'Erika Rocio Lira Gordiano', 'elirag@elektra.com.mx', null);
+INSERT INTO belajar.dbo.ResponsablesFlujos (FiNumEmpleado, FcNombre, FcCorreo, FiCelular) VALUES (977816, 'Alfredo Ramírez Reyes', 'aramirez@elektra.com.mx', 5585373165);
+INSERT INTO belajar.dbo.ResponsablesFlujos (FiNumEmpleado, FcNombre, FcCorreo, FiCelular) VALUES (965894, 'Juan Arevalo Carranza', 'jarevalo@bancoazteca.com.mx', 5525588966);
+INSERT INTO belajar.dbo.ResponsablesFlujos (FiNumEmpleado, FcNombre, FcCorreo, FiCelular) VALUES (961616, 'Carlos Alberto Del Aguila Henriquez', 'cdelagulia@elektra.com.mx', 5530170943);
+INSERT INTO belajar.dbo.ResponsablesFlujos (FiNumEmpleado, FcNombre, FcCorreo, FiCelular) VALUES (961367, 'Lilia Morales Cruz', 'lmcruz@elektra.com.mx', 5530171046);
+INSERT INTO belajar.dbo.ResponsablesFlujos (FiNumEmpleado, FcNombre, FcCorreo, FiCelular) VALUES (960428, 'Guillermo Platas Lopez', 'gplatas@elektra.com.mx', 5510822120);
+INSERT INTO belajar.dbo.ResponsablesFlujos (FiNumEmpleado, FcNombre, FcCorreo, FiCelular) VALUES (959814, 'Francisco Hernandez Vazquez', 'fhernandezv@elektra.com.mx', 5530171016);
+INSERT INTO belajar.dbo.ResponsablesFlujos (FiNumEmpleado, FcNombre, FcCorreo, FiCelular) VALUES (944260, 'Octavio Nonell Bautista', 'ononell@bancoazteca.com.mx', 5530170989);
+
+
+
+
+
+create table usuarios
+(
+	fiid int identity,
+	fiusuario int,
+	fcpassword varchar(100),
+	fiactive bit default 1
+)
+go
+
+
+
+INSERT INTO belajar.dbo.usuarios (fiid, fiusuario, fcpassword, fiactive, fdfecha) VALUES (32, 641815, '$2a$10$f6ZiBcKikMeodIyZe8BxOuCNwrnCX2eChm3JpVqlyijQc4PDiy6zu', 1, '2019-02-28 12:12:29.220');
+INSERT INTO belajar.dbo.usuarios (fiid, fiusuario, fcpassword, fiactive, fdfecha) VALUES (31, 160543, '$2a$10$KoCstTwbcUCOSdjmstssTeDFJ0coK9lbzDjaoHB9UEUy2/KAsKkZ2', 1, '2019-02-27 13:36:18.570');
+INSERT INTO belajar.dbo.usuarios (fiid, fiusuario, fcpassword, fiactive, fdfecha) VALUES (30, 180688, '$2a$10$rzfXSncNWID23fyGYzuWFOcs1KO.BWmkdosmYo2.PM4DSw6saG3GC', 1, '2019-02-27 13:24:28.737');
+INSERT INTO belajar.dbo.usuarios (fiid, fiusuario, fcpassword, fiactive, fdfecha) VALUES (29, 1212, '$2a$10$yHG8gOP0qf/JrTBxGRh5CemZTySwMY4gG8Fx7HyKHP6xHmy4N9b0C', 1, '2019-02-27 13:15:56.363');
+INSERT INTO belajar.dbo.usuarios (fiid, fiusuario, fcpassword, fiactive, fdfecha) VALUES (28, 3333, '$2a$10$ZY4.Ulvp6Xt9HDkOM/HJleba7hm85RAFLpmubS7CrEBwGC9J26JtC', 1, '2019-02-26 20:21:05.833');
+INSERT INTO belajar.dbo.usuarios (fiid, fiusuario, fcpassword, fiactive, fdfecha) VALUES (27, 182380, '$2a$10$I0bzvNM4a17CTMfbiJfRP.NVdWLr6.Wx79olXk3LzQ.P5peCOCCzi', 1, '2019-02-26 19:59:03.413');
+INSERT INTO belajar.dbo.usuarios (fiid, fiusuario, fcpassword, fiactive, fdfecha) VALUES (22, 171024, '$2a$10$kEfw9bpExfXom7gF5S2nTuRoSyKzybnyJBu985jH6EYfUmeBmizea', 1, '2019-02-26 19:13:01.773');
+INSERT INTO belajar.dbo.usuarios (fiid, fiusuario, fcpassword, fiactive, fdfecha) VALUES (19, 553719, '$2a$10$JBp/sVkKczwT6vfGPYlwz.0olhl2fzr6vA5g9X2txy.Zhh2EThT5y', 1, '2019-02-26 17:26:28.137');
+INSERT INTO belajar.dbo.usuarios (fiid, fiusuario, fcpassword, fiactive, fdfecha) VALUES (1, 345310, '$2a$10$T0lWqk.pk2guoCxhCqPS9.HHxX6TSIL2559Gk7qNIF0hODKtTXda.', 1, '2019-02-25 12:41:09.867');
+
+
+
+create table roles
+(
+	fiid int identity,
+	fcrol varchar(50)
+)
+go
+
+
+INSERT INTO belajar.dbo.roles (fiid, fcrol, fdfecha) VALUES (1, 'admin', '2019-02-25 12:47:20.253');
+INSERT INTO belajar.dbo.roles (fiid, fcrol, fdfecha) VALUES (2, 'general', '2019-02-25 12:47:20.253');
+
+
+create table usuarios_roles
+(
+	fiidusuario int,
+	fiidrole int
+)
+go
+
+
+INSERT INTO belajar.dbo.usuarios_roles (fiidusuario, fiidrole) VALUES (1, 2);
+INSERT INTO belajar.dbo.usuarios_roles (fiidusuario, fiidrole) VALUES (2, 2);
+INSERT INTO belajar.dbo.usuarios_roles (fiidusuario, fiidrole) VALUES (22, 1);
+INSERT INTO belajar.dbo.usuarios_roles (fiidusuario, fiidrole) VALUES (27, 1);
+INSERT INTO belajar.dbo.usuarios_roles (fiidusuario, fiidrole) VALUES (28, 1);
+INSERT INTO belajar.dbo.usuarios_roles (fiidusuario, fiidrole) VALUES (30, 1);
+INSERT INTO belajar.dbo.usuarios_roles (fiidusuario, fiidrole) VALUES (31, 2);
+INSERT INTO belajar.dbo.usuarios_roles (fiidusuario, fiidrole) VALUES (29, 1);
+INSERT INTO belajar.dbo.usuarios_roles (fiidusuario, fiidrole) VALUES (32, 1);
